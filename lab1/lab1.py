@@ -62,7 +62,7 @@ class G:
         """
         # every symbol is length one str
         invalid_symbols = list(filter(
-            lambda x: type(x) is not str or len(x) is not 1,
+            lambda x: (type(x) != str and type(x) != unicode) or len(x) != 1,
             chain(self.N, self.T))) 
         # intersection must be empty
         invalid_symbols.extend(self.N.intersection(self.T))
