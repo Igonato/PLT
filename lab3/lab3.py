@@ -182,13 +182,10 @@ if __name__ == '__main__':
     chains1 = filter(rc1.analyse, chains)
     chains2 = filter(rc2.analyse, chains)
     other = filter(lambda x: not (rc1.analyse(x) or rc2.analyse(x)), chains)
-    
+
     with open("1.txt", "w") as f:
         f.write('\n'.join(chains1))
     with open("2.txt", "w") as f:
         f.write('\n'.join(chains2))
     with open("!.txt", "w") as f:
         f.write('\n'.join(other))
-
-
-   

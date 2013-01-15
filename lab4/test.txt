@@ -1,0 +1,24 @@
+b *
+b ^ + a
+false
+b ^ - a
+b * b
+( ( false or true ) and false )
+b ^ - b
+b ^ + b
+a ^ b
+false
+a ^ + a
+a ^ - a
+( ( ( true ) ) ( ) )
++ a ^ b
+I love cats!
+- a * + a
+true and false
++ a ^ - a
+- a + b
+- a + a
+( true or true )
+b + a
+- a b ^ + a
+not ( true ) and false or true

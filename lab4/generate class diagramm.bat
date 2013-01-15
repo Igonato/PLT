@@ -1,0 +1,1 @@
+pyreverse -o png -p Lab4 lab4.py
