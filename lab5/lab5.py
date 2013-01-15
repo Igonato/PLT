@@ -30,7 +30,7 @@ class PPDA:
         stack = '|'
         while True:
             if stack + chain == '|' + self.S + '|':
-                return result + ' -> ' + self.S + ' SUCCESS!'
+                return result + ' SUCCESS!'
             try:
                 if self.precedences[stack[-1]][chain[0]] == '>': #reduce
                     i = -1

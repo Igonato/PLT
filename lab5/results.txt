@@ -1,14 +1,14 @@
 First grammar:
 a*b-b+a/b -> FAIL!
 b-a/b -> FAIL!
-abcbaabcbdb -> aSbaabcbdb -> aSbaaSbdb -> aSbaaSbAb -> aSbaSb -> aSbA -> S -> S SUCCESS!
-abcbd -> aSbd -> aSbA -> S -> S SUCCESS!
+abcbaabcbdb -> aSbaabcbdb -> aSbaaSbdb -> aSbaaSbAb -> aSbaSb -> aSbA -> S SUCCESS!
+abcbd -> aSbd -> aSbA -> S SUCCESS!
 a*b-(a*b-b+a/b)+a/b -> FAIL!
 bacabaca -> FAIL!
 Second grammar:
-a*b-b+a/b -> E*b-b+a/b -> E*E-b+a/b -> EF-b+a/b -> T-b+a/b -> T-E+a/b -> T-T+a/b -> T-T+E/b -> T-T+E/E -> T-T+EF -> T-T+T -> T-TR -> TR -> S -> S SUCCESS!
-b-a/b -> E-a/b -> T-a/b -> T-E/b -> T-E/E -> T-EF -> T-T -> TR -> S -> S SUCCESS!
+a*b-b+a/b -> E*b-b+a/b -> E*E-b+a/b -> EF-b+a/b -> T-b+a/b -> T-E+a/b -> T-T+a/b -> T-T+E/b -> T-T+E/E -> T-T+EF -> T-T+T -> T-TR -> TR -> S SUCCESS!
+b-a/b -> E-a/b -> T-a/b -> T-E/b -> T-E/E -> T-EF -> T-T -> TR -> S SUCCESS!
 abcbaabcbdb -> FAIL!
 abcbd -> FAIL!
-a*b-(a*b-b+a/b)+a/b -> E*b-(a*b-b+a/b)+a/b -> E*E-(a*b-b+a/b)+a/b -> EF-(a*b-b+a/b)+a/b -> T-(a*b-b+a/b)+a/b -> T-(E*b-b+a/b)+a/b -> T-(E*E-b+a/b)+a/b -> T-(EF-b+a/b)+a/b -> T-(T-b+a/b)+a/b -> T-(T-E+a/b)+a/b -> T-(T-T+a/b)+a/b -> T-(T-T+E/b)+a/b -> T-(T-T+E/E)+a/b -> T-(T-T+EF)+a/b -> T-(T-T+T)+a/b -> T-(T-TR)+a/b -> T-(TR)+a/b -> T-(S)+a/b -> T-E+a/b -> T-T+a/b -> T-T+E/b -> T-T+E/E -> T-T+EF -> T-T+T -> T-TR -> TR -> S -> S SUCCESS!
+a*b-(a*b-b+a/b)+a/b -> E*b-(a*b-b+a/b)+a/b -> E*E-(a*b-b+a/b)+a/b -> EF-(a*b-b+a/b)+a/b -> T-(a*b-b+a/b)+a/b -> T-(E*b-b+a/b)+a/b -> T-(E*E-b+a/b)+a/b -> T-(EF-b+a/b)+a/b -> T-(T-b+a/b)+a/b -> T-(T-E+a/b)+a/b -> T-(T-T+a/b)+a/b -> T-(T-T+E/b)+a/b -> T-(T-T+E/E)+a/b -> T-(T-T+EF)+a/b -> T-(T-T+T)+a/b -> T-(T-TR)+a/b -> T-(TR)+a/b -> T-(S)+a/b -> T-E+a/b -> T-T+a/b -> T-T+E/b -> T-T+E/E -> T-T+EF -> T-T+T -> T-TR -> TR -> S SUCCESS!
 bacabaca -> FAIL!
