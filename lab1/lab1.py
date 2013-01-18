@@ -335,9 +335,9 @@ if __name__ == '__main__':
             (M2.get_dot_data(), u"НДКА второй грамматики"),
             (D1.get_dot_data(), u"ДКА первой грамматики"),
             (D2.get_dot_data(), u"ДКА второй грамматики")]
-    threads = [Process(target=show_graph, args=a) for a in args] 
-    map(Process.start, threads)
-    map(Process.join, threads)
+    # threads = [Process(target=show_graph, args=a) for a in args] 
+    # map(Process.start, threads)
+    # map(Process.join, threads)
     from pygraphviz import AGraph
     for data, name in args:
         G = AGraph(data)

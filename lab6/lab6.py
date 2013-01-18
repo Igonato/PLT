@@ -1,15 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 """Syntax-directed translation""" 
-
-       #                   ##                               
-      # #                   #                               
-     #   #  ###     ###     #    #  #   ####    ##    # #   
-     #####  #  #   #  #     #    #  #     ##   # ##   ## #  
-     #   #  #  #   #  #     #    ## #   ##     ##     #     
-     #   #  #  #    ####   ###     ##   ####    ###   #     
-                                 #  #                       
-                                  ##                        
+                    
 class LL1PDAWithSDT(object):
     """Pushdown automaton for LL(1) grammar with syntax-directed translation 
     support.
@@ -218,7 +210,7 @@ class LL1PDAWithSDT(object):
                     raise ValueError('Parsing Error')
             elif _stack[0] == '$':
                 if chain[0] == '$':
-                    return True # it meant that input is correct
+                    return True # it mean that input is correct
                 else:
                     raise ValueError('Parsing Error')
 
@@ -301,7 +293,7 @@ if __name__ == '__main__':
         'T': {'+', '-', '*', '/', '(', ')'}.union(DIGITS),
         'N': {'S', 'E', 'E`', 'T', 'T`', 'F', 'N', 'N`', 'D'},
         'P': {
-            'S -> {t = []; E = []; l = []; id = 0} E {dot = "Digraph D{"'
+            'S -> {t = []; E = []; l = []; id = 0} E {dot = "digraph D{"'
                  '+ "label=\\"Syntax tree for expression " + input_ + "\\";"'
                  '+ "".join("%i->%i;" % edge for edge in E)'
                  '+ "".join("%i[label=\\"%s\\"];" % label '
@@ -327,7 +319,7 @@ if __name__ == '__main__':
         'S': 'S'}
     automaton = LL1PDAWithSDT(INFIX_TO_GRAPHVIZ_AST_TRANSLATION_SCHEME)
     dotdata = automaton.parse("((125 + 232) * 33 - 44) / 66 + 35 / 2")
-    print dotdata # Digraph D{label="Syntax tree for expression ((125 + 232) * 
+    print dotdata # digraph D{label="Syntax tree for expression ((125 + 232) * 
     # 33 - 44) / 66 + 35 / 2";2->0;2->1;4->2;4->3;6->4;6->5;8->6;8->7;11->9;
     # 11->10;12->8;12->11;0[label="125"];1[label="232"];2[label="+"];
     # 3[label="33"];4[label="*"];5[label="44"];6[label="-"];7[label="66"];
